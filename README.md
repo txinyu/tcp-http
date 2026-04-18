@@ -28,7 +28,7 @@
 
 ## 项目文件结构树
 
-'''
+```
 .
 ├── CMakeLists.txt                # 构建配置
 ├── main.cpp                      # 项目入口（HTTP 示例）
@@ -50,10 +50,10 @@
     ├── index.html
     ├── 404.html
     └── favicon.ico
-'''
+```
 ## 架构分层
 
-'''
+```
 【工具层】       Logger / Any / Util / Buffer
 【内核封装层】   Socket / Poller(epoll)
 【事件驱动层】   Channel / EventLoop / TimerWheel
@@ -61,7 +61,7 @@
 【连接管理层】   Connection / Acceptor / TcpServer
 【HTTP 协议层】  HttpRequest / HttpResponse / HttpContext
 【HTTP 业务层】  HttpServer（动静分离 + 路由分发）
-'''
+```
 ## 核心模块说明
 ### Reactor 网络核心（server.hpp）
 
@@ -84,7 +84,7 @@
 
 ### 快速上手（main.cpp）
 
-'''
+```
 #include "http/HttpServer.hpp"
 using namespace std;
 
@@ -121,7 +121,7 @@ mkdir build && cd build
 cmake ..
 make
 ./HttpServer
-'''
+```
 
 访问测试：
 - 静态页面：http://127.0.0.1:8080/index.html
